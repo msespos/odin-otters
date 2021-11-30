@@ -12,6 +12,12 @@ class OttersController < ApplicationController
   end
   
   def create
+    @otter = Otter.new(otter_params)
+    if @otter.save
+      redirect_to @otter
+    else
+      render "new"
+    end
   end
   
   def edit
@@ -22,4 +28,10 @@ class OttersController < ApplicationController
   
   def destroy
   end
+
+  private
+
+    def otter_params
+      params.require(:otter).permit(:name, :age, :cuteness, :softness)
+    end
 end
