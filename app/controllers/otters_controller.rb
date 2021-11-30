@@ -8,6 +8,7 @@ class OttersController < ApplicationController
   end
   
   def new
+    @otter = Otter.new
   end
   
   def create
