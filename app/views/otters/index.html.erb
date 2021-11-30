@@ -1,4 +1,5 @@
 Meet the Otters!
 <% @otters.each_with_index do |otter, index| %>
-  Otter <%= index %>: <%= otter %><br>
+  <br>Otter <%= index + 1 %>: <%= otter.name %>
+  <%= link_to 'Details', otter_path(otter.id) %>
 <% end %>
