@@ -2,9 +2,9 @@ class CreateOtters < ActiveRecord::Migration[6.1]
   def change
     create_table :otters do |t|
       t.string :name
-      t.int :age
-      t.int :cuteness
-      t.int :softness
+      t.integer :age
+      t.integer :cuteness
+      t.integer :softness
 
       t.timestamps
     end
