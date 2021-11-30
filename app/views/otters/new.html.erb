@@ -1,5 +1,5 @@
 <h2>Create a New Otter</h2>
-<%= form_with(model: @article) do |f| %>
+<%= form_with model: @otter do |f| %>
   Name: <%= f.text_field :name %><br>
   Age (whole number): <%= f.text_field :age %><br>
   Cuteness rating (1 to 10): <%= f.text_field :cuteness %><br>
