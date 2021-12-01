@@ -1,0 +1,17 @@
+<h2>Edit This Otter</h2>
+<h3>Current Settings:</h3>
+Name: <%= @otter.name %><br>
+Age: <%= @otter.age %><br>
+Cuteness: <%= @otter.cuteness %>/10<br>
+Softness: <%= @otter.softness %>/10<br><br>
+
+<h3>Make changes:</h3>
+<%= form_with model: @otter do |f| %>
+  Name: <%= f.text_field :name %><br>
+  Age (whole number): <%= f.text_field :age %><br>
+  Cuteness rating (1 to 10): <%= f.text_field :cuteness %><br>
+  Softness rating (1 to 10): <%= f.text_field :softness %><br><br>
+  <%= f.submit 'Save Changes To Otter!' %><br><br>
+<% end %>
+
+<%= link_to 'Back to index', root_path %>
