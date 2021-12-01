@@ -21,9 +21,16 @@ class OttersController < ApplicationController
   end
   
   def edit
+    @otter = Otter.find(params[:id])
   end
   
   def update
+    @otter = Otter.find(params[:id])
+    if @otter.update(otter_params)
+      redirect_to @otter
+    else
+      render "new"
+    end
   end
   
   def destroy
