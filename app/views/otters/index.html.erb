@@ -1,6 +1,6 @@
 <h2>Meet the Otters!</h2>
 <% @otters.each_with_index do |otter, index| %>
-  <br>Otter <%= index + 1 %>:
+  <br>Otter #<%= index + 1 %>:
   <%= link_to otter.name, otter_path(otter.id) %>
 <% end %><br><br>
 
