@@ -34,6 +34,9 @@ class OttersController < ApplicationController
   end
   
   def destroy
+    @otter = Otter.find(params[:id])
+    @otter.destroy
+    redirect_to root_path
   end
 
   private

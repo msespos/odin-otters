@@ -6,3 +6,4 @@ Softness: <%= @otter.softness %>/10<br><br>
 
 <%= link_to 'Edit this otter!', edit_otter_path(@otter) %>
 <%= link_to 'Back to index',  root_path %>
+<%= link_to 'Delete this Otter', @otter, method: :delete %>
