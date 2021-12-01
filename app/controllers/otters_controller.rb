@@ -1,10 +1,20 @@
 class OttersController < ApplicationController
   def index
     @otters = Otter.all
+
+    respond_to do |format|
+      format.html
+      format.json { render :json => @otters }
+    end
   end
   
   def show
     @otter = Otter.find(params[:id])
+
+    respond_to do |format|
+      format.html
+      format.json { render :json => @otter }
+    end
   end
   
   def new
