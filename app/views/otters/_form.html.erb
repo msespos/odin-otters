@@ -1,0 +1,7 @@
+<%= form_with model: @otter do |f| %>
+  Name: <%= f.text_field :name %><br>
+  Age (whole number): <%= f.text_field :age %><br>
+  Cuteness rating (1 to 10): <%= f.text_field :cuteness %><br>
+  Softness rating (1 to 10): <%= f.text_field :softness %><br><br>
+  <%= f.submit 'Go!' %><br><br>
+<% end %>
