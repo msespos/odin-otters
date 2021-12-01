@@ -13,9 +13,12 @@ class OttersController < ApplicationController
   
   def create
     @otter = Otter.new(otter_params)
-    if @otter.save
+    if @otter.valid?
+      @otter.save
+      flash[:notice] = "You have created an Otter!"
       redirect_to @otter
     else
+      flash.now[:messages] = @otter.errors.full_messages
       render "new"
     end
   end
@@ -27,8 +30,10 @@ class OttersController < ApplicationController
   def update
     @otter = Otter.find(params[:id])
     if @otter.update(otter_params)
+      flash[:notice] = "You have updated this Otter!"
       redirect_to @otter
     else
+      flash.now[:messages] = @otter.errors.full_messages
       render "new"
     end
   end

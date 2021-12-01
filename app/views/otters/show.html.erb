@@ -1,3 +1,7 @@
+<% if flash[:notice] %>
+  <h2 style="color:green;"><%= flash[:notice] %></h2>
+<% end %>
+
 <h2><%= @otter.name %></h2><br>
 
 Age: <%= @otter.age %><br>
