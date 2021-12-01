@@ -1,8 +1,4 @@
-<% if flash[:messages] %>
-  <% flash[:messages].each do |message| %>
-    <h2 style="color:red;"><%= message %></h2>
-  <% end %>
-<% end %>
+<%= render 'flash_messages' %>
 
 <h2>Create a New Otter</h2>
 

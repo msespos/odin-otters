@@ -2,11 +2,7 @@
   <h2 style="color:green;"><%= flash[:notice] %></h2>
 <% end %>
 
-<% if flash[:messages] %>
-  <% flash[:messages].each do |message| %>
-    <h2 style="color:red;"><%= message %></h2>
-  <% end %>
-<% end %>
+<%= render 'flash_messages' %>
 
 <h2>Edit This Otter</h2>
 <h3>Current Settings:</h3>
